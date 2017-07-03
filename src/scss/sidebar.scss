@@ -1,0 +1,81 @@
+@import './variables';
+
+ng-sidebar-container {
+  height: calc(100% - #{$topbar-height}) !important;
+  width: 100%;
+}
+
+.burger-icon {
+  display: none;
+  background: transparent;
+  border: 0.15rem solid ;
+  border-left: 0;
+  border-right: 0;
+  cursor: pointer;
+  font-size: 0;
+  height: 1.3rem;
+  margin-right: 1rem;
+  position: absolute;
+  width: 2rem;
+  right: 10px;
+
+  &::after {
+    background: $secondary;
+    content: '';
+    height: 0.15rem;
+    left: 0;
+    margin-top: -0.075rem;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+}
+
+.ng-sidebar {
+  overflow: hidden !important;
+  width: $sidebar-width;
+  background-color: $sidebar-color !important;
+  color: $secondary;
+  font-family: "Titan One", cursive;
+  .link-container {
+    width: 100%;
+
+    .link {
+      cursor: pointer;
+      padding: 30px;
+      text-align: center;
+      width: 100%;
+      transition: color 200ms;
+
+      &:hover {
+        color: $tercary;
+        border-color: $tercary;
+      }
+    }
+
+    .logout {
+      font-size: 1rem !important;
+      opacity: 0.4;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+.ng-sidebar__content {
+    width: 100%;
+    margin-left: 0;
+}
+
+@media (min-width: $small-screen) {
+  .ng-sidebar__content {
+    width: calc(100% - #{$sidebar-width});
+    margin-left: $sidebar-width!important;
+  }
+}
+
+@media (max-width: $small-screen) {
+    .burger-icon {
+        display: block;
+    }
+}

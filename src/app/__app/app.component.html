@@ -1,0 +1,16 @@
+<dashboard-topbar [hidden]="!isAuth()">
+    <div class="burger-icon" (click)="_toggleSidebar()"></div>
+</dashboard-topbar>
+<ng-sidebar-container>
+
+  <ng-sidebar [hidden]="!isAuth()" [(opened)]="_opened">
+    <div class="link-container">
+      <div class="link" (click)="navigateToBuckets()">My Buckets</div>
+    </div>
+  </ng-sidebar>
+
+  <!-- Page content -->
+  <div class="container" ng-sidebar-content>
+    <router-outlet></router-outlet>
+  </div>
+</ng-sidebar-container>

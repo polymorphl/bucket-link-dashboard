@@ -61,8 +61,16 @@ export class AppComponent {
     this._opened = !this._opened;
   }
   
+  public navigateToUsers(): void {
+      this._router.navigate(['/users']);
+  }
+
   public navigateToBuckets(): void {
       this._router.navigate(['/buckets']);
+  }
+
+  public navigateToLinks(): void {
+      this._router.navigate(['/links']);
   }
 
 }

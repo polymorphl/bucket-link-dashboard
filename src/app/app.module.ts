@@ -12,7 +12,12 @@ import {
     HttpService, DashboardService
 } from  './index';
 
-import { HomeComponent } from './pages';
+import {
+  HomeComponent,
+  BucketsComponent,
+  LinksComponent,
+  UsersComponent
+} from './pages';
 
 import { AppComponent } from './__app/app.component';
 
@@ -20,10 +25,14 @@ import { AppComponent } from './__app/app.component';
   declarations: [
     AppComponent,
     TopBarComponent,
-    HomeComponent
+    HomeComponent,
+    BucketsComponent,
+    LinksComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     SidebarModule.forRoot(),
     RoutingModule
   ],

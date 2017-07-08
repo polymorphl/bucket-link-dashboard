@@ -5,7 +5,9 @@
 
   <ng-sidebar [hidden]="!isAuth()" [(opened)]="_opened">
     <div class="link-container">
-      <div class="link" (click)="navigateToBuckets()">My Buckets</div>
+      <div class="link" (click)="navigateToUsers()">Users</div>
+      <div class="link" (click)="navigateToBuckets()">Buckets</div>
+      <div class="link" (click)="navigateToLinks()">Links</div>
     </div>
   </ng-sidebar>
 

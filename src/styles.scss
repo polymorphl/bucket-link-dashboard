@@ -1,9 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-@charset "utf-8";
+@charset 'utf-8';
 
-@import "/scss/reset";
-@import "./scss/global";
-@import "./scss/sidebar";
+// Global
+@import './scss/reset';
 @import './scss/variables';
-@import './scss/grid';
-@import './scss/fonts.scss';
+@import './scss/global';
+@import './scss/fonts';
+
+// // Components
+@import './scss/components/auth';
+@import './scss/components/sidebar';
+@import './scss/components/grid';
+@import './scss/components/input';
+@import './scss/components/button';

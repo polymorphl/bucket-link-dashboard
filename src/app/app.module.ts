@@ -15,8 +15,10 @@ import {
 import {
   HomeComponent,
   BucketsComponent,
+  BucketComponent,
   LinksComponent,
-  UsersComponent
+  UsersComponent,
+  UserComponent
 } from './pages';
 
 import { AppComponent } from './__app/app.component';
@@ -27,8 +29,10 @@ import { AppComponent } from './__app/app.component';
     TopBarComponent,
     HomeComponent,
     BucketsComponent,
+    BucketComponent,
     LinksComponent,
-    UsersComponent
+    UsersComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

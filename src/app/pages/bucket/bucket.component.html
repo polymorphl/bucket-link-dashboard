@@ -1,0 +1,15 @@
+<div class="section">
+  <h3>Nb links: {{bucket.Links?.length}}</h3>
+  <div>User</div>
+  <div class="user-email">{{bucket.User.email}}</div>
+</div>
+<div>Links</div>
+<div class="container links-container">
+    <div class="col s12">
+      <div class="row bucket" *ngFor="let link of bucket.Links">
+        <div class="col s4 m4 link-title" (click)="goToBucket(bucket.id)">{{link.title}}</div>
+        <div class="col s3 m4 link-url-count">{{link.url}}</div>
+        <div class="col s3 m4 link-desc">{{link.description}}</div>
+      </div>
+    </div>
+</div>

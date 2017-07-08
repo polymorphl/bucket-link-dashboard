@@ -1,2 +1,12 @@
-<p> buckets page </p>
-<pre>{{buckets | json}}</pre>
+<div class="section">
+  <h3>Nb buckets: {{buckets?.length}}</h3>
+</div>
+<div class="container buckets-container">
+    <div class="col s12">
+      <div class="row bucket" *ngFor="let bucket of buckets">
+        <div class="col s4 m4 bucket-name" (click)="goToBucket(bucket.id)">{{bucket.name}}</div>
+        <div class="col s3 m4 bucket-links-count">{{bucket.Links.length}}</div>
+        <div class="col s5 m4 bucket-user" (click)="goToUser(bucket.User.id)">{{bucket.User.email}}</div>
+      </div>
+    </div>
+</div>

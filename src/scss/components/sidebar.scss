@@ -1,4 +1,4 @@
-@import './variables';
+@import '~scss/variables';
 
 ng-sidebar-container {
   height: calc(100% - #{$topbar-height}) !important;
@@ -11,7 +11,7 @@ ng-sidebar-container {
   border: 0.15rem solid ;
   border-left: 0;
   border-right: 0;
-  cursor: pointer;
+
   font-size: 0;
   height: 1.3rem;
   margin-right: 1rem;
@@ -36,12 +36,11 @@ ng-sidebar-container {
   width: $sidebar-width;
   background-color: $sidebar-color !important;
   color: $secondary;
-  font-family: "Titan One", cursive;
   .link-container {
     width: 100%;
 
     .link {
-      cursor: pointer;
+
       padding: 30px;
       text-align: center;
       width: 100%;
@@ -67,14 +66,27 @@ ng-sidebar-container {
     margin-left: 0;
 }
 
-@media (min-width: $small-screen) {
+@media #{$medium-and-up} {
+
+  // aside {
+  //   transform: translateX(-175px) !important;
+
+  //   .logo-link {
+  //     display: static !important;
+  //   }
+
+  //   .link {
+  //     display: none;
+  //   }
+  // }
+
   .ng-sidebar__content {
     width: calc(100% - #{$sidebar-width});
     margin-left: $sidebar-width!important;
   }
 }
 
-@media (max-width: $small-screen) {
+@media #{$small-and-down} {
     .burger-icon {
         display: block;
     }

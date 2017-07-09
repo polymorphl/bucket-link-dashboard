@@ -62,15 +62,18 @@ export class AppComponent {
   }
   
   public navigateToUsers(): void {
-      this._router.navigate(['/users']);
+    if (this._layout) this._closeSidebar();
+    this._router.navigate(['/users']);
   }
 
   public navigateToBuckets(): void {
-      this._router.navigate(['/buckets']);
+    if (this._layout) this._closeSidebar();
+    this._router.navigate(['/buckets']);
   }
 
   public navigateToLinks(): void {
-      this._router.navigate(['/links']);
+    if (this._layout) this._closeSidebar();
+    this._router.navigate(['/links']);
   }
 
 }
